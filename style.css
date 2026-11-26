@@ -1,0 +1,201 @@
+/* Основные стили (Тёмная тема) */
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    padding: 40px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+    color: #ff6b35;
+    font-size: 48px;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+p {
+    font-size: 20px;
+    color: #cccccc;
+}
+
+h2 {
+    color: #ff6b35;
+    margin-top: 30px;
+}
+
+ul {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Кнопки */
+button {
+    background-color: #ff6b35;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #ff8c5a;
+    transform: scale(1.05);
+}
+
+/* Карточки */
+.card {
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+    border: 1px solid #3a3a3a;
+    animation: fadeInUp 1s ease-out;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.card h3 {
+    color: #ff6b35;
+    font-size: 28px;
+    margin-top: 0;
+}
+
+.card p {
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+/* Форма */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 18px;
+    color: #ff6b35;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #3a3a3a;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #ff6b35;
+}
+
+input[type="text"]::placeholder {
+    color: #666666;
+}
+
+#greeting-message {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ff6b35;
+    font-weight: bold;
+    min-height: 30px;
+}
+
+/* Светлая тема */
+body.light-theme {
+    background-color: #f4f4f4;
+    color: #1a1a1a;
+}
+
+body.light-theme p {
+    color: #333333;
+}
+
+body.light-theme .card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .card p {
+    color: #333333;
+}
+
+body.light-theme h1, 
+body.light-theme h2, 
+body.light-theme .card h3 {
+    color: #d35400;
+}
+
+body.light-theme input[type="text"] {
+    background-color: #ffffff;
+    border-color: #dddddd;
+    color: #1a1a1a;
+}
+
+body.light-theme input[type="text"]:focus {
+    border-color: #d35400;
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Стили для фотографии */
+.my-photo {
+    width: 150px;            /* Фиксированная ширина */
+    height: 150px;           /* Фиксированная высота */
+    object-fit: cover;       /* Обрезает фото, чтобы оно не сплющивалось */
+    border-radius: 50%;      /* Делает фото круглым! */
+    border: 4px solid #ff6b35; /* Оранжевая рамка */
+    margin: 0 auto 20px;     /* Центрируем и даем отступ снизу */
+    display: block;          /* Нужно для центрирования */
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4); /* Красивая тень */
+}
+/* Стили для списка хобби с иконками */
+.hobbies-list {
+    list-style: none; /* Убираем стандартные черные точки списка */
+    padding: 0;
+}
+
+.hobbies-list li {
+    font-size: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Расстояние между иконкой и текстом */
+}
+
+.hobbies-list i {
+    color: #ff6b35;       /* Оранжевый цвет иконок */
+    font-size: 24px;      /* Иконки чуть крупнее текста */
+    width: 30px;          /* Фиксированная ширина, чтобы текст был ровно */
+    text-align: center;
+}
+
+/* Для светлой темы иконки тоже должны быть красивыми */
+body.light-theme .hobbies-list i {
+    color: #d35400;
+}

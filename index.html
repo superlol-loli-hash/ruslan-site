@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт Руслана</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <h1>Салам алейкум, братья славяне!</h1>
+    <p>Меня зовут Руслан, я учусь создавать сайты</p>
+    
+    <div class="card">
+        <h3>🚀 Обо мне</h3>
+        <!-- Вставляем фото -->
+        <img src="me.jpg" alt="Фото Руслана" class="my-photo">
+        <p>Я начинающий веб-разработчик. Учусь создавать крутые сайты и мечтаю стать профи!</p>
+    </div>
+    
+    <div class="card">
+        <h3>👋 Поздоровайся со мной!</h3>
+        <form id="greeting-form">
+            <label for="name-input">Как тебя зовут?</label>
+            <input type="text" id="name-input" placeholder="Введи своё имя">
+            <button type="submit">Поздороваться</button>
+        </form>
+        <p id="greeting-message"></p>
+    </div>
+    
+    <h2>Мои хобби:</h2>
+    <ul class="hobbies-list">
+        <li><i class="fa-solid fa-utensils"></i> Кушать</li>
+        <li><i class="fa-solid fa-bed"></i> Спать</li>
+        <li><i class="fa-solid fa-smoking"></i> Курить</li>
+    </ul>
+    
+    <button id="click-btn">Кнопка</button>
+    <br><br>
+    <button id="theme-btn">Сменить тему 🌙</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>
